@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Tu tienda de componentes PC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TechHub</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="guia.html">Guía PC</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="nav-icons">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="carrito.html"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Construye tu PC ideal</h1>
+            <p>Componentes de alta calidad para gamers y profesionales</p>
+            <div class="hero-buttons">
+                <a href="catalogo.html" class="btn primary-btn">Ver Catálogo</a>
+                <a href="guia.html" class="btn secondary-btn">Guía de Componentes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías destacadas -->
+    <section class="categories">
+        <h2 class="section-title">Categorías Populares</h2>
+        <div class="category-container">
+            <div class="category-card">
+                <img src="img/procesador.jpg" alt="Procesadores">
+                <h3>Procesadores</h3>
+                <a href="catalogo.html?categoria=procesadores" class="btn small-btn">Ver más</a>
+            </div>
+            <div class="category-card">
+                <img src="img/tarjeta-grafica.jpg" alt="Tarjetas Gráficas">
+                <h3>Tarjetas Gráficas</h3>
+                <a href="catalogo.html?categoria=graficas" class="btn small-btn">Ver más</a>
+            </div>
+            <div class="category-card">
+                <img src="img/memoria-ram.jpg" alt="Memoria RAM">
+                <h3>Memoria RAM</h3>
+                <a href="catalogo.html?categoria=ram" class="btn small-btn">Ver más</a>
+            </div>
+            <div class="category-card">
+                <img src="img/motherboard.jpg" alt="Placas Base">
+                <h3>Placas Base</h3>
+                <a href="catalogo.html?categoria=placas" class="btn small-btn">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guía rápida de componentes -->
+    <section class="quick-guide">
+        <h2 class="section-title">Guía Rápida de Componentes</h2>
+        <p class="guide-intro">Conoce los componentes esenciales para armar tu PC</p>
+        
+        <div class="guide-container">
+            <div class="guide-item">
+                <div class="guide-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="guide-content">
+                    <h3>Procesador (CPU)</h3>
+                    <p>El cerebro de tu computadora. Determina la velocidad y capacidad de procesamiento.</p>
+                    <a href="guia.html#cpu" class="guide-link">Leer más</a>
+                </div>
+            </div>
+            
+            <div class="guide-item">
+                <div class="guide-icon">
+                    <i class="fas fa-memory"></i>
+                </div>
+                <div class="guide-content">
+                    <h3>Memoria RAM</h3>
+                    <p>Almacenamiento temporal que permite ejecutar programas y multitareas con fluidez.</p>
+                    <a href="guia.html#ram" class="guide-link">Leer más</a>
+                </div>
+            </div>
+            
+            <div class="guide-item">
+                <div class="guide-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <div class="guide-content">
+                    <h3>Tarjeta Gráfica (GPU)</h3>
+                    <p>Procesa los gráficos y permite visualizar contenido en alta resolución y videojuegos.</p>
+                    <a href="guia.html#gpu" class="guide-link">Leer más</a>
+                </div>
+            </div>
+            
+            <div class="guide-item">
+                <div class="guide-icon">
+                    <i class="fas fa-hdd"></i>
+                </div>
+                <div class="guide-content">
+                    <h3>Almacenamiento</h3>
+                    <p>SSD o HDD para guardar tus archivos, programas y sistema operativo.</p>
+                    <a href="guia.html#storage" class="guide-link">Leer más</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="guide-cta">
+            <a href="guia.html" class="btn primary-btn">Ver Guía Completa</a>
+        </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="featured-products">
+        <h2 class="section-title">Productos Destacados</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-badge">Oferta</div>
+                <img src="img/producto1.jpg" alt="Procesador AMD Ryzen 7">
+                <h3>Procesador AMD Ryzen 7 5800X</h3>
+                <p class="product-description">8 núcleos, 16 hilos, hasta 4.7GHz</p>
+                <div class="product-price">
+                    <span class="price-old">$7,999</span>
+                    <span class="price-current">$6,799</span>
+                </div>
+                <button class="btn add-to-cart">Añadir al carrito</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/producto2.jpg" alt="Tarjeta Gráfica NVIDIA RTX 3070">
+                <h3>Tarjeta Gráfica NVIDIA RTX 3070</h3>
+                <p class="product-description">8GB GDDR6, Ray Tracing, DLSS</p>
+                <div class="product-price">
+                    <span class="price-current">$14,999</span>
+                </div>
+                <button class="btn add-to-cart">Añadir al carrito</button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge">Nuevo</div>
+                <img src="img/producto3.jpg" alt="Memoria RAM Corsair Vengeance">
+                <h3>Memoria RAM Corsair Vengeance RGB Pro</h3>
+                <p class="product-description">32GB (2x16GB) DDR4 3600MHz</p>
+                <div class="product-price">
+                    <span class="price-current">$3,299</span>
+                </div>
+                <button class="btn add-to-cart">Añadir al carrito</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/producto4.jpg" alt="SSD Samsung 970 EVO">
+                <h3>SSD Samsung 970 EVO Plus</h3>
+                <p class="product-description">1TB NVMe M.2, Lectura 3500MB/s</p>
+                <div class="product-price">
+                    <span class="price-current">$2,499</span>
+                </div>
+                <button class="btn add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Mantente Actualizado</h2>
+            <p>Suscríbete para recibir ofertas exclusivas y noticias sobre nuevos productos</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn primary-btn">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>TechHub</h3>
+                <p>Tu tienda especializada en componentes de PC y periféricos de alta calidad.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="guia.html">Guía de Componentes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Ciudad</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@techhub.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

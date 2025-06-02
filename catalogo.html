@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - TechHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TechHub</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="guia.html">Guía PC</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="nav-icons">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="carrito.html"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Encabezado del catálogo -->
+    <header class="catalog-header">
+        <div class="catalog-header-content">
+            <h1>Catálogo de Productos</h1>
+            <p>Encuentra los mejores componentes para tu PC</p>
+        </div>
+    </header>
+
+    <!-- Filtros y búsqueda -->
+    <section class="catalog-filters">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3>Categorías</h3>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="cat-procesadores"> <label for="cat-procesadores">Procesadores</label></li>
+                        <li><input type="checkbox" id="cat-placas"> <label for="cat-placas">Placas Base</label></li>
+                        <li><input type="checkbox" id="cat-ram"> <label for="cat-ram">Memoria RAM</label></li>
+                        <li><input type="checkbox" id="cat-graficas"> <label for="cat-graficas">Tarjetas Gráficas</label></li>
+                        <li><input type="checkbox" id="cat-almacenamiento"> <label for="cat-almacenamiento">Almacenamiento</label></li>
+                        <li><input type="checkbox" id="cat-fuentes"> <label for="cat-fuentes">Fuentes de Poder</label></li>
+                        <li><input type="checkbox" id="cat-refrigeracion"> <label for="cat-refrigeracion">Refrigeración</label></li>
+                        <li><input type="checkbox" id="cat-perifericos"> <label for="cat-perifericos">Periféricos</label></li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <div class="price-slider">
+                        <input type="range" min="0" max="50000" value="25000" class="slider" id="price-range">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span id="price-value">$25,000</span>
+                            <span>$50,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Marcas</h3>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="brand-intel"> <label for="brand-intel">Intel</label></li>
+                        <li><input type="checkbox" id="brand-amd"> <label for="brand-amd">AMD</label></li>
+                        <li><input type="checkbox" id="brand-nvidia"> <label for="brand-nvidia">NVIDIA</label></li>
+                        <li><input type="checkbox" id="brand-asus"> <label for="brand-asus">ASUS</label></li>
+                        <li><input type="checkbox" id="brand-msi"> <label for="brand-msi">MSI</label></li>
+                        <li><input type="checkbox" id="brand-gigabyte"> <label for="brand-gigabyte">Gigabyte</label></li>
+                        <li><input type="checkbox" id="brand-corsair"> <label for="brand-corsair">Corsair</label></li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Disponibilidad</h3>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="stock-yes" checked> <label for="stock-yes">En stock</label></li>
+                        <li><input type="checkbox" id="stock-no"> <label for="stock-no">Agotado</label></li>
+                    </ul>
+                </div>
+                
+                <button class="btn filter-btn">Aplicar Filtros</button>
+                <button class="btn secondary-btn">Limpiar Filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos del catálogo -->
+    <section class="catalog-products">
+        <div class="container">
+            <div class="catalog-header-row">
+                <h2>Productos (24)</h2>
+                <div class="catalog-sort">
+                    <label for="sort-by">Ordenar por:</label>
+                    <select id="sort-by">
+                        <option value="relevance">Relevancia</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                        <option value="newest">Más recientes</option>
+                        <option value="popular">Más populares</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <img src="img/producto1.jpg" alt="Procesador AMD Ryzen 7">
+                    <h3>Procesador AMD Ryzen 7 5800X</h3>
+                    <p class="product-description">8 núcleos, 16 hilos, hasta 4.7GHz</p>
+                    <div class="product-price">
+                        <span class="price-old">$7,999</span>
+                        <span class="price-current">$6,799</span>
+                    </div>
+                    <div class="product-stock in-stock">
+                        <i class="fas fa-check-circle"></i> En stock
+                    </div>
+                    <button class="btn add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="img/producto2.jpg" alt="Tarjeta Gráfica NVIDIA RTX 3070">
+                    <h3>Tarjeta Gráfica NVIDIA RTX 3070</h3>
+                    <p class="product-description">8GB GDDR6, Ray Tracing, DLSS</p>
+                    <div class="product-price">
+                        <span class="price-current">$14,999</span>
+                    </div>
+                    <div class="product-stock in-stock">
+                        <i class="fas fa-check-circle"></i> En stock
+                    </div>
+                    <button class="btn add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-badge">Nuevo</div>
+                    <img src="img/producto3.jpg" alt="Memoria RAM Corsair Vengeance">
+                    <h3>Memoria RAM Corsair Vengeance RGB Pro</h3>
+                    <p class="product-description">32GB (2x16GB) DDR4 3600MHz</p>
+                    <div class="product-price">
+                        <span class="price-current">$3,299</span>
+                    </div>
+                    <div class="product-stock in-stock">
+                        <i class="fas fa-check-circle"></i> En stock
+                    </div>
+                    <button class="btn add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="img/producto4.jpg" alt="SSD Samsung 970 EVO">
+                    <h3>SSD Samsung 970 EVO Plus</h3>
+                    <p class="product-description">1TB NVMe M.2, Lectura 3500MB/s</p>
+                    <div class="product-price">
+                        <span class="price-current">$2,499</span>
+                    </div>
+                    <div class="product-stock in-stock">
+                        <i class="fas fa-check-circle"></i> En stock
+                    </div>
+                    <button class="btn add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img src="img/producto5.jpg" alt="Placa Base ASUS ROG">
+                    <h3>Placa Base ASUS ROG Strix B550-F Gaming</h3>
+                    <p class="product-description">Socket AM4, ATX, PCIe 4.0</p>
+                    <div class="product-price">
+                        <span class="price-current">$4,299</span>
+                    </div>
+                    <div class="product-stock in-stock">
+                        <i class="fas fa-check-circle"></i> En stock
+                    </div>
+                    <button class="btn add-to-cart">Añadir al carrito</button>
+                </div>
+                
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img src="img/producto6.jpg" alt="Fuente de Poder Corsair">
+                    <h3>Fuente de Poder Corsair RM750x</h3>
+                    <p class="product-description">750W, 80 Plus Gold, Modular</p>
+                    <div class="product-price">
+                        <span class="price-current">$2,999</span>
+                    </div>
+                    <div class="product-stock out-of-stock">
+                        <i class="fas fa-times-circle"></i> Agotado
+                    </div>
+                    <button class="btn add-to-cart disabled">Agotado</button>
+                </div>
+                
+                <!-- Más productos seguirían aquí -->
+            </div>
+            
+            <!-- Paginación -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="next">Siguiente <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>TechHub</h3>
+                <p>Tu tienda especializada en componentes de PC y periféricos de alta calidad.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="guia.html">Guía de Componentes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Ciudad</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@techhub.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

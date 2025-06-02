@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - TechHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TechHub</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="guia.html">Guía PC</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="nav-icons">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" class="active"><i class="fas fa-shopping-cart"></i> <span class="cart-count">3</span></a>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Contenido del carrito -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title">Carrito de Compras</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <span class="header-product">Producto</span>
+                        <span class="header-price">Precio</span>
+                        <span class="header-quantity">Cantidad</span>
+                        <span class="header-total">Total</span>
+                        <span class="header-actions"></span>
+                    </div>
+                    
+                    <!-- Producto 1 en el carrito -->
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <img src="img/producto1.jpg" alt="Procesador AMD Ryzen 7">
+                            <div class="item-details">
+                                <h3>Procesador AMD Ryzen 7 5800X</h3>
+                                <p>8 núcleos, 16 hilos, hasta 4.7GHz</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$6,799</div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="item-total">$6,799</div>
+                        <div class="item-actions">
+                            <button class="remove-item"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 2 en el carrito -->
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <img src="img/producto3.jpg" alt="Memoria RAM Corsair Vengeance">
+                            <div class="item-details">
+                                <h3>Memoria RAM Corsair Vengeance RGB Pro</h3>
+                                <p>32GB (2x16GB) DDR4 3600MHz</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$3,299</div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="item-total">$3,299</div>
+                        <div class="item-actions">
+                            <button class="remove-item"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Producto 3 en el carrito -->
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <img src="img/producto4.jpg" alt="SSD Samsung 970 EVO">
+                            <div class="item-details">
+                                <h3>SSD Samsung 970 EVO Plus</h3>
+                                <p>1TB NVMe M.2, Lectura 3500MB/s</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$2,499</div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="item-total">$2,499</div>
+                        <div class="item-actions">
+                            <button class="remove-item"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de acción del carrito -->
+                    <div class="cart-actions">
+                        <button class="btn secondary-btn">Continuar Comprando</button>
+                        <button class="btn danger-btn">Vaciar Carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Resumen del carrito -->
+                <div class="cart-summary">
+                    <h2>Resumen del Pedido</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$12,597</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Envío</span>
+                        <span>$199</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Impuestos (16%)</span>
+                        <span>$2,015.52</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$14,811.52</span>
+                    </div>
+                    
+                    <!-- Cupón de descuento -->
+                    <div class="coupon-form">
+                        <h3>Cupón de Descuento</h3>
+                        <div class="coupon-input">
+                            <input type="text" placeholder="Código de cupón">
+                            <button class="btn small-btn">Aplicar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón de checkout -->
+                    <button class="btn primary-btn full-width checkout-btn">Proceder al Pago</button>
+                    
+                    <!-- Métodos de pago aceptados -->
+                    <div class="payment-methods">
+                        <p>Aceptamos:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>TechHub</h3>
+                <p>Tu tienda especializada en componentes de PC y periféricos de alta calidad.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="guia.html">Guía de Componentes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Ciudad</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@techhub.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
